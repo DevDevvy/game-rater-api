@@ -14,8 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+# import rest framework
+from rest_framework import routers
+# import all views for routing
+from gameraterapi.views import GameView
+# make url not need trailing slash to work
+router = routers.DefaultRouter(trailing_slash=False)
+# ----------------url, what view, basename for errors
+router.register(r'games', GameView, 'game')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),
 ]
