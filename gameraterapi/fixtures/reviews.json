@@ -1,0 +1,29 @@
+[
+    {
+        "model": "gameraterapi.review",
+        "pk": 1,
+        "fields": {
+            "review": "Call of Doody more like it",
+            "game_id": 1,
+            "gamer_id": 1
+        }
+    },
+    {
+        "model": "gameraterapi.review",
+        "pk": 2,
+        "fields": {
+            "review": "twas just s smidgen too slow",
+            "game_id": 2,
+            "gamer_id": 1
+        }
+    },
+    {
+        "model": "gameraterapi.review",
+        "pk": 3,
+        "fields": {
+            "review": "smeels unde the hood",
+            "game_id": 3,
+            "gamer_id": 1
+        }
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "model": "gameraterapi.game",
+        "pk": 1,
+        "fields": {
+            "title": "Call of Doody",
+            "description": "Blow off some steam and blow up your friends",
+            "designer": "game co",
+            "year_released": 2010,
+            "number_of_players": 4,
+            "est_time_to_play": 60,
+            "age_rec": 18,
+            "gamer_id": 1
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 2,
+        "fields": {
+            "title": "Animal Crossing",
+            "description": "Something about animals",
+            "designer": "phonegame co",
+            "year_released": 2019,
+            "number_of_players": 1,
+            "est_time_to_play": 600,
+            "age_rec": 5,
+            "gamer_id": 1
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 3,
+        "fields": {
+            "title": "Assassins Creed",
+            "description": "Be a little dude doing parcour across an ancient city",
+            "designer": "player co",
+            "year_released": 2006,
+            "number_of_players": 1,
+            "est_time_to_play": 120,
+            "age_rec": 18,
+            "gamer_id": 1
+        }
+    }
+]
