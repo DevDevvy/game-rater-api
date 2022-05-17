@@ -19,7 +19,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-
+# import photo
+MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'
 # UPDATE THIS
 INSTALLED_APPS = [
     'django.contrib.admin',

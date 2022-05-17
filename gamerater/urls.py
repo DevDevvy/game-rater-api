@@ -23,7 +23,10 @@ from gameraterapi.views.Gamer import GamerView
 from gameraterapi.views.auth import login_user, register_user
 from gameraterapi.views.category import CategoryView
 from gameraterapi.views.gamereview import GameReviewView
+from gameraterapi.views.photo import PhotoView
 from gameraterapi.views.rating import RatingView
+from django.conf.urls.static import static
+from django.conf import settings
 # make url not need trailing slash to work
 router = routers.DefaultRouter(trailing_slash=False)
 # ----------------url, what view, basename for errors
@@ -32,10 +35,12 @@ router.register(r'categories', CategoryView, 'category')
 router.register(r'reviews', GameReviewView, 'review')
 router.register(r'gamers', GamerView, 'gamer')
 router.register(r'ratings', RatingView, 'rating')
+router.register(r'photos', PhotoView, 'photo')
 
 urlpatterns = [
     path('register', register_user),
     path('login', login_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# ^last line is for photo media settings to be tied to a URL

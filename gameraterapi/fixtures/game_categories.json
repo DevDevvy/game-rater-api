@@ -1,26 +1,26 @@
 
 [
     {
-        "model": "gameraterapi.game_categories",
+        "model": "gameraterapi.game_category",
         "pk": 1,
         "fields": {
-            "category_id": 10,
+            "category_id": 1,
             "game_id": 1
         }
     },
     {
-        "model": "gameraterapi.game_categories",
+        "model": "gameraterapi.game_category",
         "pk": 2,
         "fields": {
-            "category_id": 4,
+            "category_id": 1,
             "game_id": 2
         }
     },
     {
-        "model": "gameraterapi.game_categories",
+        "model": "gameraterapi.game_category",
         "pk": 3,
         "fields": {
-            "category_id": 9,
+            "category_id": 3,
             "game_id": 1
         }
     }

@@ -40,14 +40,22 @@ class RatingView(ViewSet):
             Response -- JSON serialized list of categories
         """
         ratings = Rating.objects.all()
+        gamer = Gamer.objects.get(user=request.auth.user)
         game = request.query_params.get('game', None)
+        gamer_id = request.query_params.get('gamer', None)
         # check if string is a query ie /?game=1
         if game is not None:
             ratings = ratings.filter(game_id=game)
-        
+        if gamer_id is not None:
+            ratings = ratings.filter(gamer=gamer_id)
         serializer = RatingSerializer(ratings, many=True)
         return Response(serializer.data)
-
+    
+    def destroy(self, request, pk):
+        rating = Rating.objects.get(pk=pk)
+        rating.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        
 
 class RatingSerializer(serializers.ModelSerializer):
     """JSON serializer for categories
