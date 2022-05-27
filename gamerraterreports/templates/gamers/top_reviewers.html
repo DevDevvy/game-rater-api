@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rater Reports</title>
+  </head>
+  <body>
+    <h1>Top Reviewist</h1>
+    <table>
+        <tr>
+            <th>Gamer ID</th>
+            <th>Name</th>
+            <th>Reviews</th>
+        </tr>
+        
+        <tr>
+        {% for gamer in topreviewers_list %}
+                <td>{{gamer.id}}</td>
+                <td>{{gamer.name}}</td>
+                <td>{{gamer.count}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+  </body>
+</html>

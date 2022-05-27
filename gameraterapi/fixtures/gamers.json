@@ -7,5 +7,29 @@
             "user": 1,
             "bio": "Me"
         }
+    },
+    {
+        "model": "gameraterapi.gamer",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "bio": "Player hater."
+        }
+    },
+    {
+        "model": "gameraterapi.gamer",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "bio": "Gamenerd"
+        }
+    },
+    {
+        "model": "gameraterapi.gamer",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "bio": "Keep it squeal."
+        }
     }
 ]

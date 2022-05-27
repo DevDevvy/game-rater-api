@@ -36,8 +36,9 @@ class GameView(ViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save(gamer=gamer)
     
-        game = Game.objects.get(pk=serializer.data["id"])
+        game = serializer.instance
         game.category.add(request.data["category_id"])
+        game = GameSerializer(game)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     
@@ -124,7 +125,7 @@ class GameSerializer(serializers.ModelSerializer):
 class CreateGameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        fields = ['id', 'title', 'description', 'designer', 'year_released', 'number_of_players', 'est_time_to_play', 'age_rec']
+        fields = ['title', 'description', 'designer', 'year_released', 'number_of_players', 'est_time_to_play', 'age_rec']
         
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:

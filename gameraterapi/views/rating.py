@@ -25,7 +25,7 @@ class RatingView(ViewSet):
             Response -- JSON serialized rating instance
         """
         gamer = Gamer.objects.get(user=request.auth.user)
-        game = Game.objects.get(pk=request.data['game_id'])
+        game = Game.objects.get(pk=request.query_params.get('game', None))
         serializer = CreateRatingSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(gamer=gamer, game=game)
@@ -40,7 +40,6 @@ class RatingView(ViewSet):
             Response -- JSON serialized list of categories
         """
         ratings = Rating.objects.all()
-        gamer = Gamer.objects.get(user=request.auth.user)
         game = request.query_params.get('game', None)
         gamer_id = request.query_params.get('gamer', None)
         # check if string is a query ie /?game=1
@@ -50,6 +49,18 @@ class RatingView(ViewSet):
             ratings = ratings.filter(gamer=gamer_id)
         serializer = RatingSerializer(ratings, many=True)
         return Response(serializer.data)
+    
+    def update(self, request, pk):
+        """Handle PUT requests for a rating
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        rating = Rating.objects.get(pk=pk)
+        serializer = CreateRatingSerializer(rating, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
         rating = Rating.objects.get(pk=pk)
@@ -68,4 +79,4 @@ class RatingSerializer(serializers.ModelSerializer):
 class CreateRatingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rating
-        fields = [ 'rating', 'game_id']
+        fields = [ 'rating']

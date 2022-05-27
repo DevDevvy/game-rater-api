@@ -40,5 +40,113 @@
             "age_rec": 18,
             "gamer_id": 1
         }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 4,
+        "fields": {
+
+            "title": "GoFish",
+            "description": "Got any 3s",
+            "designer": "History",
+            "gamer": 3,
+            "year_released": 2009,
+            "number_of_players": 8,
+            "est_time_to_play": 200,
+            "age_rec": 8,
+            "category": [3, 4]
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 5,
+        "fields": {
+            "title": "Catan",
+            "description": "The settlers",
+            "designer": "Who Knows",
+            "gamer": 4,
+            "year_released": 2010,
+            "number_of_players": 4,
+            "est_time_to_play": 40,
+            "age_rec": 4,
+            "category": [1, 2]
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 6,
+        "fields": {
+
+            "title": "Neopets",
+            "description": "PetPetPetPet",
+            "designer": "Neopets",
+            "gamer": 3,
+            "year_released": 2003,
+            "number_of_players": 100,
+            "est_time_to_play": 200,
+            "age_rec": 5,
+            "category": [1, 2]
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 7,
+        "fields": {
+
+            "title": "Pokemon",
+            "description": "Gotta Catch 'Em All",
+            "designer": "Nintendo",
+            "gamer": 2,
+            "year_released": 1993,
+            "number_of_players": 1,
+            "est_time_to_play": 200,
+            "age_rec": 9,
+            "category": [1, 2]
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 8,
+        "fields": {
+            "title": "Halo",
+            "description": "Combat Evolved",
+            "designer": "Bungie",
+            "gamer": 2,
+            "year_released": 2001,
+            "number_of_players": 8,
+            "est_time_to_play": 200,
+            "age_rec": 18,
+            "category": [1, 2]
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 9,
+        "fields": {
+            "title": "Skyrim",
+            "description": "The gathering",
+            "designer": "Bethesda",
+            "gamer": 4,
+            "year_released": 2011,
+            "number_of_players": 8,
+            "est_time_to_play": 200,
+            "age_rec": 13,
+            "category": [1, 2]
+        }
+    },
+    {
+        "model": "gameraterapi.game",
+        "pk": 10,
+        "fields": {
+            "title": "Yahtzee",
+            "description": "The gathering",
+            "designer": "Hasbro?",
+            "gamer": 1,
+            "year_released": 1960,
+            "number_of_players": 5,
+            "est_time_to_play": 200,
+            "age_rec": 7,
+            "category": [1, 2]
+        }
     }
 ]

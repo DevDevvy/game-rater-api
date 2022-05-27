@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rater Reports</title>
+  </head>
+  <body>
+    <h1>Game Count by Category</h1>
+    <table>
+        <tr>
+            <th>Cat ID</th>
+            <th>Category</th>
+            <th>Count</th>
+        </tr>
+        
+        <tr>
+        {% for category in gamescountbycategory_list %}
+                <td>{{category.id}}</td>
+                <td>{{category.category}}</td>
+                <td>{{category.game_count}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+  </body>
+</html>

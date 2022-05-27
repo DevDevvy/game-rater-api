@@ -1,0 +1,74 @@
+[
+    {
+        "model": "gameraterapi.rating",
+        "pk": 1,
+        "fields": {
+            "rating": 1,
+            "game_id": 1,
+            "gamer_id": 1
+        }
+    },
+    {
+        "model": "gameraterapi.rating",
+        "pk": 1,
+        "fields": {
+            "game_id": 1,
+            "gamer_id": 1,
+            "rating": 1
+        }
+    },
+    {
+        "model": "gameraterapi.rating",
+        "pk": 2,
+        "fields": {
+            "game_id": 2,
+            "gamer_id": 2,
+            "rating": 2
+        }
+    },
+    {
+        "model": "gameraterapi.rating",
+        "pk": 3,
+        "fields": {
+            "game_id": 3,
+            "gamer_id": 3,
+            "rating": 3
+        }
+    },
+    {
+        "model": "gameraterapi.rating",
+        "pk": 4,
+        "fields": {
+            "game_id": 4,
+            "gamer_id": 4,
+            "rating": 4
+        }
+    },
+    {
+        "model": "gameraterapi.rating",
+        "pk": 5,
+        "fields": {
+            "game_id": 2,
+            "gamer_id": 1,
+            "rating": 5
+        }
+    },
+    {
+        "model": "gameraterapi.rating",
+        "pk": 6,
+        "fields": {
+            "game_id": 3,
+            "gamer_id": 1,
+            "rating": 4
+        }
+    },
+    {
+        "model": "gameraterapi.rating",
+        "pk": 7,
+        "fields": {
+            "game_id": 3,
+            "gamer_id": 2,
+            "rating": 3
+        }
+    }
+]

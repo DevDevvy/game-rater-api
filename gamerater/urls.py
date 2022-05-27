@@ -42,5 +42,6 @@ urlpatterns = [
     path('login', login_user),
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('', include('gamerraterreports.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # ^last line is for photo media settings to be tied to a URL

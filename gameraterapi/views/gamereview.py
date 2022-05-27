@@ -84,4 +84,4 @@ class GameReviewSerializer(serializers.ModelSerializer):
 class CreateGameReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ['id', 'review', 'game']
+        fields = ['review', 'game']
